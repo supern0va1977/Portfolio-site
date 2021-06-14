@@ -9,16 +9,18 @@ button background-color: #e0b354;
 color: #2b2b2b
 
 */
-/*--------------page basics----------- */
+
+/* --------------page basics----------- */
+
 :root {
   --primary-color: #357b70;
   --seconday-color: #e0b354;
   --dark-grey: #2b2b2b;
   --green: #991;
-  --peach: #FF9671;
-  --dark-green: #1B6300;
+  --peach: #ff9671;
+  --dark-green: #1b6300;
   --red: #921;
-  --light-tan: #E5DBCE;
+  --light-tan: #e5dbce;
   --light-sun: #edc655;
   --light-yellow: #fcffad;
   --bright-orange: #f76414;
@@ -30,25 +32,27 @@ color: #2b2b2b
 }
 
 body {
-background-color: var(--peach);
+  background-color: var(--peach);
 }
 
 body {
-color: var(--black);
+  color: var(--black);
 }
 
 a {
-  color: var(--primary-color)
+  color: var(--primary-color);
 }
 
-body {           /*this sets the page font, size and line spacing for the body*/
+/* this sets the page font, size and line spacing for the body */
+
+body {
   font-family: 'Lora', sans-serif;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.5;
 }
 
-h1{
+h1 {
   font-size: 50px;
   font-weight: 700;
 }
@@ -58,7 +62,8 @@ a:visited {
   color: var(--black);
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   /* no underlining when hovering over a link */
   text-decoration: none;
 }
@@ -76,11 +81,12 @@ a:active {
   text-decoration: none;
 }
 
+/* --------------end page basics----------- */
 
-/*--------------end page basics----------- */
+/* ----------------profile page------------------- */
 
-/*----------------profile page-------------------*/
-.button, input[type="submit"] {
+.button,
+input[type="submit"] {
   border: none;
   display: inline-block;
   font-family: inherit;
@@ -93,14 +99,17 @@ a:active {
   transition: 0.2s opacity;
 }
 
-.button:hover, .button:focus, input[type="submit"]:hover, input[type="submit"]:focus {
+.button:hover,
+.button:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
   cursor: pointer;
   opacity: 0.8;
 }
 
 .profile__portrait {
   float: left;
-  width: 250PX;
+  width: 250px;
   margin-right: 40px;
   border-radius: 50%;
 }
@@ -110,16 +119,15 @@ a:active {
   margin: 0 auto;
 }
 
+/* ----------------end profile page------------------- */
 
-/*----------------end profile page-------------------*/
-
-/*---------------page footers and headders-----------*/
+/* ---------------page footers and headders----------- */
 .page-footer {
   clear: both;
-	text-align: center;
-	padding: 10px;
-	display: flex;
-	flex-direction: column;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .social-media {
@@ -127,7 +135,6 @@ a:active {
   flex-direction: column;
   align-items: center;
   padding: 10px;
-
 }
 
 .page-header {
@@ -154,16 +161,17 @@ a:active {
   margin-left: 15px;
 }
 
-/*---------------end page footers and headders-----------*/
+/* ---------------end page footers and headders----------- */
 
-/*--------------contacts page-------------------*/
+/* --------------contacts page------------------- */
 .inputs {
   display: flex;
   display: inline-block;
   padding: 20px;
 }
 
-.main-headder, .contact {
+.main-headder,
+.contact {
   display: inline-block;
   width: 100%;
   padding: 20px;
@@ -175,17 +183,17 @@ a:active {
 }
 
 #contact-form {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   margin: 0 auto;
-   max-width: 400px;
-   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 400px;
+  padding: 20px;
 }
 
-/*--------------end contacts page---------------*/
+/* --------------end contacts page--------------- */
 
-/*--------------about me ---------------*/
+/* --------------about me --------------- */
 .about-me {
   display: flex;
   flex-direction: column;
@@ -208,10 +216,12 @@ a:active {
   0% {
     fill: var(--light-sun);
   }
+
   50% {
     fill: var(--light-yellow);
   }
-  100%{
+
+  100% {
     fill: var(--bright-orange);
   }
 }
@@ -224,6 +234,7 @@ a:active {
   from {
     transform: translate(0, 50px);
   }
+
   to {
     transform: translate(200px, 50px);
   }
@@ -237,6 +248,7 @@ a:active {
   from {
     transform: translate(446px, 48px);
   }
+
   to {
     transform: translate(100px, 48px);
   }
@@ -246,9 +258,9 @@ a:active {
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
-/*-------------- end about me ---------------*/
+/* -------------- end about me --------------- */
 
-/*--------------work page  ---------------*/
+/* --------------work page  --------------- */
 
 .grid {
   display: grid;
@@ -265,27 +277,31 @@ a:active {
   border: solid black 2px;
 }
 
-
 @media all and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
   }
 }
+
 @media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media all and (max-width: 750px) {
   .grid {
-    grid-gap: 10px
+    grid-gap: 10px;
   }
-.grid__item:last-child {
+
+  .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   h1 {
     font-size: 22px;
   }
 }
-/*-------------- end work page  ---------------*/
+
+/* -------------- end work page  --------------- */
